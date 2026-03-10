@@ -8,6 +8,7 @@ public class Main {
         System.out.println(s1);
 
 
+
 //LABORATOR 2
         int i;
         List<Integer> x = new ArrayList();
