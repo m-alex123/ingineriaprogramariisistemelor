@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Student
 {
     int numărMatricol;
@@ -14,6 +16,19 @@ public class Student
     public String toString()
     {
         return "Student: " + nume + " " + prenume + "\nMatricol: " + numărMatricol + "\nGrupa: " + formațieDeStudiu;
+    }
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return Objects.equals(prenume, student.prenume) &&
+                Objects.equals(nume, student.nume) &&
+                Objects.equals(formațieDeStudiu, student.formațieDeStudiu);
+    }
+    public int hashCode()
+    {
+        return Objects.hash(prenume, nume, formațieDeStudiu);
     }
 
 }
