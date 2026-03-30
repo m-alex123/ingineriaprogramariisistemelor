@@ -6,7 +6,6 @@ public class Student
     String prenume;
     String nume;
     String formațieDeStudiu;
-    float nota;
 
     public Student(int nrMat, String pnume, String n, String fDeS)
     {
@@ -14,25 +13,13 @@ public class Student
         this.prenume = pnume;
         this.nume = n;
         this.formațieDeStudiu = fDeS;
-        this.nota = 0.0f;
-    }
-
-    public void setNota(float nota)
-    {
-        this.nota = nota;
-    }
-
-    public float getNota()
-    {
-        return nota;
     }
 
     public String toString()
     {
         return "Student: " + nume + " " + prenume +
                 "\nMatricol: " + numărMatricol +
-                "\nGrupa: " + formațieDeStudiu +
-                "\nNota: " + nota;
+                "\nGrupa: " + formațieDeStudiu;
     }
 
     public boolean equals(Object o)
