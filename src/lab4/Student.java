@@ -32,7 +32,7 @@ public class Student
 
     public String toString()
     {
-        return "Student: " + nume + " " + prenume + " | Nota: " + nota;
+        return "Student.Student: " + nume + " " + prenume + " | Nota: " + nota;
     }
 
     public boolean equals(Object o)

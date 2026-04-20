@@ -1,3 +1,5 @@
+package Student;
+
 import java.util.Objects;
 
 public class Student
@@ -17,7 +19,7 @@ public class Student
     }
     public String toString()
     {
-        return "Student: " + nume + " " + prenume + ", Matricol: " + numărMatricol + ", Grupa: " + formațieDeStudiu + ", Medie: " + medie;
+        return "Student.Student: " + nume + " " + prenume + ", Matricol: " + numărMatricol + ", Grupa: " + formațieDeStudiu + ", Medie: " + medie;
     }
     public boolean equals(Object o)
     {
@@ -30,4 +32,8 @@ public class Student
     {
         return Objects.hash(numărMatricol);
     }
+    public String getFormatieDeStudiu() { return formațieDeStudiu; }
+    public String getNume() { return nume; }
+    public String getPrenume() { return prenume; }
+    public double getMedie() { return medie; }
 }

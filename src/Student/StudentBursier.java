@@ -1,3 +1,5 @@
+package Student;
+
 import java.util.Objects;
 
 public class StudentBursier extends Student
@@ -24,4 +26,5 @@ public class StudentBursier extends Student
     {
         return super.toString() + ", Bursa: " + cuantumBursa;
     }
+    public double getCuantumBursa() { return cuantumBursa; }
 }
