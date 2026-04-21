@@ -1,0 +1,4 @@
+Student.Student: Popa Andrei, Matricol: 1025, Grupa: ISM14/2, Medie: 8.7, Bursa: 725.5
+Student.Student: Mihalcea Ioan, Matricol: 1024, Grupa: ISM14/1, Medie: 9.8, Bursa: 801.1
+Student.Student: Prodan Anamaria, Matricol: 1026, Grupa: TI31/1, Medie: 8.9, Bursa: 745.5
+Student.Student: Popescu Bianca, Matricol: 1029, Grupa: TI11/1, Medie: 9.1, Bursa: 780.8
