@@ -20,4 +20,4 @@ public class Square  extends Form{
         return "Square: "+super.toString()+"; side="+side;
     }
 
-}
+}//

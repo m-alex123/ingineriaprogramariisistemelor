@@ -8,8 +8,7 @@ import lab7.util.PasswordMaker;
 
 public class Main {
     public static void main(String[] args) {
-
-        // 7.6.1. Contor instante
+//
         Triangle tri = new Triangle(1.1F, 2.0F, "red");
         Circle c = new Circle(1.5F, "yellow");
         Square sq = new Square(1.2F, "blue");
@@ -18,7 +17,7 @@ public class Main {
         System.out.println("Area = " + sq.getArea() + " details: " + sq);
         System.out.println("Total instance count is " + Form.getInstanceCount());   // sau tri.getInstanceCount() sau sq.getInstanceCount()
 
-        //7.6.2 Password maker singleton
+
         PasswordMaker pm2 = PasswordMaker.getInstance();
         System.out.println("\n7.6.2 a+b) Generated passwords: ");
         System.out.println("1:" + PasswordMaker.getInstance().getPassword());

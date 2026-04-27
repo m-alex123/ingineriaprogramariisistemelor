@@ -18,7 +18,7 @@ public final class Student
 
     public String getName() { return name; }
     public String getFormatieStudiu() { return formatieStudiu; }
-
+//
     public static Student schimbaFormatia(Student st, String nouaFormatieDeStudiu)
     {
         return new Student(st.getName(), nouaFormatieDeStudiu);

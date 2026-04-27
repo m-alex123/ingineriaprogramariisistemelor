@@ -38,6 +38,7 @@ public class main
         }
         return rezultat;
     }
+    //
     static Student schimbaFormatia(Student st, String nouaFormatieDeStudiu)
     {
         return new Student(st.getName(), nouaFormatieDeStudiu);

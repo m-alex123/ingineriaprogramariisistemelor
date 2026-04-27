@@ -17,7 +17,7 @@ public class StringRandomizer {
         char result[] = new char[n];
         for(int i=0; i<n; i++) {
             result[i] = alphabet.charAt(rand.nextInt(countLetters));
-        }
+        }//
 
         return new String(result);
     }

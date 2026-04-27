@@ -19,7 +19,7 @@ public class Triangle extends Form{
 
     public String toString() {
         return "Triangle: "+super.toString()+"; base="+base+"  height="+height; //reutilizare toString din clasa parinte
-    }
+    }//
 
     public boolean equals(Object obj) {
         if (obj instanceof Triangle) {
