@@ -3,6 +3,7 @@ package Student;
 import java.util.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main
 {
@@ -38,6 +39,49 @@ public class Main
         writeToFile("bursieri_out.txt", bursieri);
 
         System.out.println("\nSalvarea datelor pentru bursieri a fost finalizată.");
+
+        //LABORATOR 9
+        System.out.println("\nLABORATOR 9");
+
+        List<Student> studentiCuNote = Arrays.asList(
+                new Student(1025, "Andrei", "Popa", "ISM141/2", 8.70),
+                new Student(1024, "Ioan", "Mihalcea", "ISM141/1", 10),
+                new Student(1026, "Anamaria", "Prodan", "TI131/1", 8.90),
+                new Student(1029, "Bianca", "Popescu", "TI131/1", 10),
+                new Student(1029, "Maria", "Pana", "TI131/2", 4.10),
+                new Student(1029, "Gabriela", "Mohanu", "TI131/2", 7.33),
+                new Student(1029, "Marius", "Nasta", "TI131/2", 3.20),
+                new Student(1029, "Marius", "Nasta", "TI131/1", 5.12),
+                new Student(1029, "Andrei", "Dobrescu", "TI131/2", 2.22)
+        );
+
+        System.out.println("\n--- Studenți cu nota 10 ---");
+        studentiCuNote.stream().filter(s -> s.getMedie() == 10).forEach(System.out::println);
+
+        System.out.println("\n--- Studenți cu nota sub 5 ---");
+        studentiCuNote.stream().filter(s -> s.getMedie() < 5).forEach(System.out::println);
+
+        List<Student> studentiCorectati = studentiCuNote.stream().map(s ->
+                {
+                    if (s.getMedie() < 4)
+                    {
+                        return new Student(s.numărMatricol, s.getPrenume(), s.getNume(), s.getFormatieDeStudiu(), 4.0);
+                    }
+                    return s;
+                }).collect(java.util.stream.Collectors.toList());
+
+        System.out.println("\n--- Lista studenți (după maparea notelor < 4 la 4) ---");
+        studentiCorectati.forEach(System.out::println);
+
+        double sumaNote = studentiCuNote.stream().map(Student::getMedie).reduce(0.0, (a, b) -> a + b);
+
+        System.out.println("\nSuma notelor tuturor studenților: " + sumaNote);
+
+        if (!studentiCuNote.isEmpty())
+        {
+            double mediaGenerala = sumaNote / studentiCuNote.size();
+            System.out.println("Media generală a grupului: " + mediaGenerala);
+        }
     }
     public static void writeToFile(String filename, Collection<? extends Student> lista)
     {
