@@ -40,7 +40,6 @@ public class Main
 
         System.out.println("\nSalvarea datelor pentru bursieri a fost finalizată.");
 
-        //LABORATOR 9
         System.out.println("\nLABORATOR 9");
 
         List<Student> studentiCuNote = Arrays.asList(

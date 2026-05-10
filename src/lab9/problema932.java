@@ -4,7 +4,8 @@ import java.util.stream.Collectors;
 
 public class problema932
 {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         String text = "Acesta este un program scris in java pentru expresii lambda";
         List<String> cuvinte = Arrays.asList(text.split(" "));
 

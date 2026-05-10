@@ -6,6 +6,7 @@ public class problema931
 {
     public static void main(String[] args)
     {
+        //
         Random random = new Random();
         List<Integer> numere = random.ints(10, 5, 26).boxed().collect(Collectors.toList());
         System.out.println("Lista initiala: " + numere);
