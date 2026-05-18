@@ -36,4 +36,5 @@ public class Student
     public String getNume() { return nume; }
     public String getPrenume() { return prenume; }
     public double getMedie() { return medie; }
+    public int getId(){return numărMatricol;}
 }
